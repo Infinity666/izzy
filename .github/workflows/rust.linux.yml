@@ -14,6 +14,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
+      - name: install gcc
+        run: apt update && apt install -y gcc-10-aarch64-linux-gnu gcc-10-arm-linux-gnueabihf
       - name: Install nightly
         run: rustup toolchain install nightly
       - name: add aarch64
