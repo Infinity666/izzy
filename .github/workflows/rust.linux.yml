@@ -16,7 +16,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: install gcc
-        run: sudo apt update && sudo apt install -y gcc-10-aarch64-linux-gnu gcc-10-arm-linux-gnueabihf
+        run: sudo apt update && sudo apt install -y gcc-aarch64-linux-gnu gcc-arm-linux-gnueabihf
       - name: Install nightly
         run: rustup toolchain install nightly
       - name: add arm 7
